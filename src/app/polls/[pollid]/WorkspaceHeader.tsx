@@ -128,7 +128,7 @@ const WorkspaceHeader: React.FC<PageProps> = ({ id }) => {
     <>
       <Disclosure
         as="header"
-        className="bg-white shadow border-2 border-Gray-Background"
+        className="bg-white shadow border-2 border-Gray-Background fixed top-0 left-0 right-0 z-50"
       >
         {({ open }) => (
           <>
