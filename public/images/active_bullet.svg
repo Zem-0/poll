@@ -1,0 +1,6 @@
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Bullet">
+<circle id="Current indicator" opacity="0.32" cx="10.25" cy="10" r="8" fill="#E97451"/>
+<circle id="Dot" cx="10.25" cy="10" r="4" fill="#E97451"/>
+</g>
+</svg>

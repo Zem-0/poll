@@ -1,0 +1,906 @@
+pollvault-frontend-repo/
+├─ .env
+├─ .github/
+│  └─ workflows/
+│     └─ main.yml
+├─ .gitignore
+├─ .next/
+│  ├─ app-build-manifest.json
+│  ├─ build-manifest.json
+│  ├─ cache/
+│  │  ├─ swc/
+│  │  │  └─ plugins/
+│  │  │     └─ v7_macos_aarch64_0.106.15/
+│  │  └─ webpack/
+│  │     ├─ client-development/
+│  │     │  ├─ 0.pack.gz
+│  │     │  ├─ 1.pack.gz
+│  │     │  ├─ 10.pack.gz
+│  │     │  ├─ 11.pack.gz
+│  │     │  ├─ 12.pack.gz
+│  │     │  ├─ 13.pack.gz
+│  │     │  ├─ 14.pack.gz
+│  │     │  ├─ 15.pack.gz
+│  │     │  ├─ 16.pack.gz
+│  │     │  ├─ 17.pack.gz
+│  │     │  ├─ 18.pack.gz
+│  │     │  ├─ 19.pack.gz
+│  │     │  ├─ 2.pack.gz
+│  │     │  ├─ 20.pack.gz
+│  │     │  ├─ 21.pack.gz
+│  │     │  ├─ 3.pack.gz
+│  │     │  ├─ 4.pack.gz
+│  │     │  ├─ 5.pack.gz
+│  │     │  ├─ 6.pack.gz
+│  │     │  ├─ 7.pack.gz
+│  │     │  ├─ 8.pack.gz
+│  │     │  ├─ 9.pack.gz
+│  │     │  ├─ index.pack.gz
+│  │     │  └─ index.pack.gz.old
+│  │     └─ server-development/
+│  │        ├─ 0.pack.gz
+│  │        ├─ 1.pack.gz
+│  │        ├─ 10.pack.gz
+│  │        ├─ 11.pack.gz
+│  │        ├─ 12.pack.gz
+│  │        ├─ 13.pack.gz
+│  │        ├─ 14.pack.gz
+│  │        ├─ 15.pack.gz
+│  │        ├─ 16.pack.gz
+│  │        ├─ 17.pack.gz
+│  │        ├─ 18.pack.gz
+│  │        ├─ 19.pack.gz
+│  │        ├─ 2.pack.gz
+│  │        ├─ 20.pack.gz
+│  │        ├─ 21.pack.gz
+│  │        ├─ 3.pack.gz
+│  │        ├─ 4.pack.gz
+│  │        ├─ 5.pack.gz
+│  │        ├─ 6.pack.gz
+│  │        ├─ 7.pack.gz
+│  │        ├─ 8.pack.gz
+│  │        ├─ 9.pack.gz
+│  │        ├─ index.pack.gz
+│  │        └─ index.pack.gz.old
+│  ├─ package.json
+│  ├─ react-loadable-manifest.json
+│  ├─ server/
+│  │  ├─ _ssr_src_app_dashboard_dashboard_components_analyze-poll_page_tsx.js
+│  │  ├─ _ssr_src_app_dashboard_dashboard_components_create-poll_page_tsx.js
+│  │  ├─ _ssr_src_app_dashboard_dashboard_components_zap-poll_zapopoll_tsx.js
+│  │  ├─ app/
+│  │  │  ├─ dashboard/
+│  │  │  │  ├─ page.js
+│  │  │  │  └─ page_client-reference-manifest.js
+│  │  │  ├─ page.js
+│  │  │  ├─ page_client-reference-manifest.js
+│  │  │  ├─ polls/
+│  │  │  │  └─ [pollid]/
+│  │  │  │     ├─ page.js
+│  │  │  │     └─ page_client-reference-manifest.js
+│  │  │  └─ signin/
+│  │  │     ├─ page.js
+│  │  │     └─ page_client-reference-manifest.js
+│  │  ├─ app-paths-manifest.json
+│  │  ├─ interception-route-rewrite-manifest.js
+│  │  ├─ middleware-build-manifest.js
+│  │  ├─ middleware-manifest.json
+│  │  ├─ middleware-react-loadable-manifest.js
+│  │  ├─ next-font-manifest.js
+│  │  ├─ next-font-manifest.json
+│  │  ├─ pages-manifest.json
+│  │  ├─ server-reference-manifest.js
+│  │  ├─ server-reference-manifest.json
+│  │  ├─ vendor-chunks/
+│  │  │  ├─ @babel.js
+│  │  │  ├─ @deepgram.js
+│  │  │  ├─ @dnd-kit.js
+│  │  │  ├─ @emotion.js
+│  │  │  ├─ @floating-ui.js
+│  │  │  ├─ @headlessui.js
+│  │  │  ├─ @heroicons.js
+│  │  │  ├─ @kurkle.js
+│  │  │  ├─ @mui.js
+│  │  │  ├─ @popperjs.js
+│  │  │  ├─ @react-aria.js
+│  │  │  ├─ @reduxjs.js
+│  │  │  ├─ @swc.js
+│  │  │  ├─ @xmldom.js
+│  │  │  ├─ asynckit.js
+│  │  │  ├─ axios.js
+│  │  │  ├─ base64-js.js
+│  │  │  ├─ bluebird.js
+│  │  │  ├─ camel-case.js
+│  │  │  ├─ chart.js.js
+│  │  │  ├─ clsx.js
+│  │  │  ├─ combined-stream.js
+│  │  │  ├─ core-util-is.js
+│  │  │  ├─ cross-fetch.js
+│  │  │  ├─ dayjs.js
+│  │  │  ├─ debug.js
+│  │  │  ├─ deepmerge.js
+│  │  │  ├─ delayed-stream.js
+│  │  │  ├─ dingbat-to-unicode.js
+│  │  │  ├─ dom-helpers.js
+│  │  │  ├─ follow-redirects.js
+│  │  │  ├─ form-data.js
+│  │  │  ├─ has-flag.js
+│  │  │  ├─ hoist-non-react-statics.js
+│  │  │  ├─ immediate.js
+│  │  │  ├─ immer.js
+│  │  │  ├─ inherits.js
+│  │  │  ├─ isarray.js
+│  │  │  ├─ jszip.js
+│  │  │  ├─ lie.js
+│  │  │  ├─ lop.js
+│  │  │  ├─ lower-case.js
+│  │  │  ├─ mammoth.js
+│  │  │  ├─ mime-db.js
+│  │  │  ├─ mime-types.js
+│  │  │  ├─ ms.js
+│  │  │  ├─ next.js
+│  │  │  ├─ no-case.js
+│  │  │  ├─ node-fetch.js
+│  │  │  ├─ object-assign.js
+│  │  │  ├─ option.js
+│  │  │  ├─ pako.js
+│  │  │  ├─ path-is-absolute.js
+│  │  │  ├─ process-nextick-args.js
+│  │  │  ├─ prop-types.js
+│  │  │  ├─ proxy-from-env.js
+│  │  │  ├─ react-icons-kit.js
+│  │  │  ├─ react-icons.js
+│  │  │  ├─ react-is.js
+│  │  │  ├─ react-redux.js
+│  │  │  ├─ react-transition-group.js
+│  │  │  ├─ readable-stream.js
+│  │  │  ├─ redux-thunk.js
+│  │  │  ├─ redux.js
+│  │  │  ├─ reselect.js
+│  │  │  ├─ safe-buffer.js
+│  │  │  ├─ string_decoder.js
+│  │  │  ├─ supports-color.js
+│  │  │  ├─ tabbable.js
+│  │  │  ├─ tr46.js
+│  │  │  ├─ underscore.js
+│  │  │  ├─ upper-case.js
+│  │  │  ├─ use-sync-external-store.js
+│  │  │  ├─ util-deprecate.js
+│  │  │  ├─ webidl-conversions.js
+│  │  │  ├─ whatwg-url.js
+│  │  │  └─ xmlbuilder.js
+│  │  └─ webpack-runtime.js
+│  ├─ static/
+│  │  ├─ chunks/
+│  │  │  ├─ _app-pages-browser_src_app_dashboard_dashboard_components_analyze-poll_page_tsx.js
+│  │  │  ├─ _app-pages-browser_src_app_dashboard_dashboard_components_create-poll_page_tsx.js
+│  │  │  ├─ _app-pages-browser_src_app_dashboard_dashboard_components_zap-poll_zapopoll_tsx.js
+│  │  │  ├─ app/
+│  │  │  │  ├─ dashboard/
+│  │  │  │  │  └─ page.js
+│  │  │  │  ├─ layout.js
+│  │  │  │  ├─ not-found.js
+│  │  │  │  ├─ page.js
+│  │  │  │  ├─ polls/
+│  │  │  │  │  └─ [pollid]/
+│  │  │  │  │     └─ page.js
+│  │  │  │  └─ signin/
+│  │  │  │     └─ page.js
+│  │  │  ├─ app-pages-internals.js
+│  │  │  ├─ main-app.js
+│  │  │  ├─ polyfills.js
+│  │  │  └─ webpack.js
+│  │  ├─ css/
+│  │  │  └─ app/
+│  │  │     ├─ dashboard/
+│  │  │     │  └─ page.css
+│  │  │     ├─ layout.css
+│  │  │     ├─ page.css
+│  │  │     ├─ polls/
+│  │  │     │  └─ [pollid]/
+│  │  │     │     └─ page.css
+│  │  │     └─ signin/
+│  │  │        └─ page.css
+│  │  ├─ development/
+│  │  │  ├─ _buildManifest.js
+│  │  │  └─ _ssgManifest.js
+│  │  ├─ media/
+│  │  │  ├─ 21633f890e359fee-s.woff2
+│  │  │  ├─ 26a46d62cd723877-s.woff2
+│  │  │  ├─ 293d9d85a89f760b-s.woff2
+│  │  │  ├─ 3a8dc5763a8ae4b2-s.p.woff2
+│  │  │  ├─ 55c55f0601d81cf3-s.woff2
+│  │  │  ├─ 581909926a08bbc8-s.woff2
+│  │  │  ├─ 6d93bde91c0c2823-s.woff2
+│  │  │  ├─ 8976b37f8037a4c0-s.woff2
+│  │  │  ├─ 97e0cb1ae144a2a9-s.woff2
+│  │  │  ├─ 9c526da3fdc4ac93-s.woff2
+│  │  │  ├─ a34f9d1faa5f3315-s.p.woff2
+│  │  │  ├─ ada9171bd6839183-s.woff2
+│  │  │  ├─ d364c42434837330-s.woff2
+│  │  │  └─ df0a9ae256c0569c-s.woff2
+│  │  └─ webpack/
+│  │     ├─ 060ed4df1beb72d0.webpack.hot-update.json
+│  │     ├─ 090a8ac4f6707bf1.webpack.hot-update.json
+│  │     ├─ 09fa5beb9648c64d.webpack.hot-update.json
+│  │     ├─ 0c44a3cf2ede6ad7.webpack.hot-update.json
+│  │     ├─ 118de25a26e09549.webpack.hot-update.json
+│  │     ├─ 14eb771ff83acb1e.webpack.hot-update.json
+│  │     ├─ 15a674ed8a94f107.webpack.hot-update.json
+│  │     ├─ 171ac76efc2c73d6.webpack.hot-update.json
+│  │     ├─ 1a95aaa2031bb65b.webpack.hot-update.json
+│  │     ├─ 207ecdd73e69bfb5.webpack.hot-update.json
+│  │     ├─ 2455f15ec01407c1.webpack.hot-update.json
+│  │     ├─ 2666a5a139aed503.webpack.hot-update.json
+│  │     ├─ 28c7ccba95ce187f.webpack.hot-update.json
+│  │     ├─ 2997474cba16ebf8.webpack.hot-update.json
+│  │     ├─ 2bdaf8074664498d.webpack.hot-update.json
+│  │     ├─ 2f56ad7bbf83f4a4.webpack.hot-update.json
+│  │     ├─ 331b9e4d596c9835.webpack.hot-update.json
+│  │     ├─ 359dbd23fba1ded7.webpack.hot-update.json
+│  │     ├─ 3a7320f1983cdcfd.webpack.hot-update.json
+│  │     ├─ 3c770d9d3f7e64a6.webpack.hot-update.json
+│  │     ├─ 3df1bf3411f00d05.webpack.hot-update.json
+│  │     ├─ 40de4a1b54d33b44.webpack.hot-update.json
+│  │     ├─ 45b60e74f84df885.webpack.hot-update.json
+│  │     ├─ 4a6d1bf2f4a329af.webpack.hot-update.json
+│  │     ├─ 4b461aa8e415601a.webpack.hot-update.json
+│  │     ├─ 4d9cd854ab3910a1.webpack.hot-update.json
+│  │     ├─ 50156eb24f681ffb.webpack.hot-update.json
+│  │     ├─ 52f12a6d4096213f.webpack.hot-update.json
+│  │     ├─ 5464de12279057c0.webpack.hot-update.json
+│  │     ├─ 57fc292dc21610a3.webpack.hot-update.json
+│  │     ├─ 5b66f3687675b537.webpack.hot-update.json
+│  │     ├─ 5bfbc9c702be15d5.webpack.hot-update.json
+│  │     ├─ 5c88524ed44bb5fb.webpack.hot-update.json
+│  │     ├─ 633457081244afec._.hot-update.json
+│  │     ├─ 681e7a3e7e9b8f54.webpack.hot-update.json
+│  │     ├─ 714ffd54bec47bed.webpack.hot-update.json
+│  │     ├─ 7291594f05d16621.webpack.hot-update.json
+│  │     ├─ 744c2f2e450e0475.webpack.hot-update.json
+│  │     ├─ 780bbecd379daf5d.webpack.hot-update.json
+│  │     ├─ 78a1228a7b56612c.webpack.hot-update.json
+│  │     ├─ 79187b8d0db4056f.webpack.hot-update.json
+│  │     ├─ 79a7acd47077c597.webpack.hot-update.json
+│  │     ├─ 7ace63876c3f368a.webpack.hot-update.json
+│  │     ├─ 7ae08694b7f19498.webpack.hot-update.json
+│  │     ├─ 7b2fcbc4d3d9fc98.webpack.hot-update.json
+│  │     ├─ 7d5a3e15a9057fc0.webpack.hot-update.json
+│  │     ├─ 85e42fa1eb391fe8.webpack.hot-update.json
+│  │     ├─ 92c53da023e61020.webpack.hot-update.json
+│  │     ├─ 964e323493acb8f1.webpack.hot-update.json
+│  │     ├─ 97b54e5c2d559da6.webpack.hot-update.json
+│  │     ├─ 990ba207df442b14.webpack.hot-update.json
+│  │     ├─ 99bb6b505cb50246.webpack.hot-update.json
+│  │     ├─ 9c5a23e3cf3a363b.webpack.hot-update.json
+│  │     ├─ 9cdc3ffae92d3328.webpack.hot-update.json
+│  │     ├─ 9d45e5384fbba1ca.webpack.hot-update.json
+│  │     ├─ ad5314f6610145f2.webpack.hot-update.json
+│  │     ├─ adbf4f9331db5809.webpack.hot-update.json
+│  │     ├─ app/
+│  │     │  ├─ layout.060ed4df1beb72d0.hot-update.js
+│  │     │  ├─ layout.090a8ac4f6707bf1.hot-update.js
+│  │     │  ├─ layout.09fa5beb9648c64d.hot-update.js
+│  │     │  ├─ layout.0c44a3cf2ede6ad7.hot-update.js
+│  │     │  ├─ layout.118de25a26e09549.hot-update.js
+│  │     │  ├─ layout.14eb771ff83acb1e.hot-update.js
+│  │     │  ├─ layout.15a674ed8a94f107.hot-update.js
+│  │     │  ├─ layout.171ac76efc2c73d6.hot-update.js
+│  │     │  ├─ layout.1a95aaa2031bb65b.hot-update.js
+│  │     │  ├─ layout.207ecdd73e69bfb5.hot-update.js
+│  │     │  ├─ layout.2455f15ec01407c1.hot-update.js
+│  │     │  ├─ layout.2666a5a139aed503.hot-update.js
+│  │     │  ├─ layout.28c7ccba95ce187f.hot-update.js
+│  │     │  ├─ layout.2997474cba16ebf8.hot-update.js
+│  │     │  ├─ layout.2bdaf8074664498d.hot-update.js
+│  │     │  ├─ layout.2f56ad7bbf83f4a4.hot-update.js
+│  │     │  ├─ layout.331b9e4d596c9835.hot-update.js
+│  │     │  ├─ layout.359dbd23fba1ded7.hot-update.js
+│  │     │  ├─ layout.3a7320f1983cdcfd.hot-update.js
+│  │     │  ├─ layout.3c770d9d3f7e64a6.hot-update.js
+│  │     │  ├─ layout.3df1bf3411f00d05.hot-update.js
+│  │     │  ├─ layout.40de4a1b54d33b44.hot-update.js
+│  │     │  ├─ layout.45b60e74f84df885.hot-update.js
+│  │     │  ├─ layout.4a6d1bf2f4a329af.hot-update.js
+│  │     │  ├─ layout.4b461aa8e415601a.hot-update.js
+│  │     │  ├─ layout.4d9cd854ab3910a1.hot-update.js
+│  │     │  ├─ layout.50156eb24f681ffb.hot-update.js
+│  │     │  ├─ layout.52f12a6d4096213f.hot-update.js
+│  │     │  ├─ layout.5464de12279057c0.hot-update.js
+│  │     │  ├─ layout.57fc292dc21610a3.hot-update.js
+│  │     │  ├─ layout.5b66f3687675b537.hot-update.js
+│  │     │  ├─ layout.5bfbc9c702be15d5.hot-update.js
+│  │     │  ├─ layout.5c88524ed44bb5fb.hot-update.js
+│  │     │  ├─ layout.681e7a3e7e9b8f54.hot-update.js
+│  │     │  ├─ layout.714ffd54bec47bed.hot-update.js
+│  │     │  ├─ layout.7291594f05d16621.hot-update.js
+│  │     │  ├─ layout.744c2f2e450e0475.hot-update.js
+│  │     │  ├─ layout.780bbecd379daf5d.hot-update.js
+│  │     │  ├─ layout.78a1228a7b56612c.hot-update.js
+│  │     │  ├─ layout.79187b8d0db4056f.hot-update.js
+│  │     │  ├─ layout.79a7acd47077c597.hot-update.js
+│  │     │  ├─ layout.7ace63876c3f368a.hot-update.js
+│  │     │  ├─ layout.7b2fcbc4d3d9fc98.hot-update.js
+│  │     │  ├─ layout.7d5a3e15a9057fc0.hot-update.js
+│  │     │  ├─ layout.85e42fa1eb391fe8.hot-update.js
+│  │     │  ├─ layout.92c53da023e61020.hot-update.js
+│  │     │  ├─ layout.964e323493acb8f1.hot-update.js
+│  │     │  ├─ layout.97b54e5c2d559da6.hot-update.js
+│  │     │  ├─ layout.990ba207df442b14.hot-update.js
+│  │     │  ├─ layout.99bb6b505cb50246.hot-update.js
+│  │     │  ├─ layout.9c5a23e3cf3a363b.hot-update.js
+│  │     │  ├─ layout.9cdc3ffae92d3328.hot-update.js
+│  │     │  ├─ layout.9d45e5384fbba1ca.hot-update.js
+│  │     │  ├─ layout.ad5314f6610145f2.hot-update.js
+│  │     │  ├─ layout.adbf4f9331db5809.hot-update.js
+│  │     │  ├─ layout.b05bd7ded66353e5.hot-update.js
+│  │     │  ├─ layout.b30fae880392e2aa.hot-update.js
+│  │     │  ├─ layout.b3a4ef88e7cde882.hot-update.js
+│  │     │  ├─ layout.b7aab0fe50d3f6ed.hot-update.js
+│  │     │  ├─ layout.be4ee2c7334bb9e6.hot-update.js
+│  │     │  ├─ layout.c1124de9466809c1.hot-update.js
+│  │     │  ├─ layout.c23dd1cbf46a85ad.hot-update.js
+│  │     │  ├─ layout.c2a404c70c086eaa.hot-update.js
+│  │     │  ├─ layout.c40270b38adb7f6d.hot-update.js
+│  │     │  ├─ layout.c501a41a049924ae.hot-update.js
+│  │     │  ├─ layout.c53958fd7d2a9a6d.hot-update.js
+│  │     │  ├─ layout.c5f82fc7a01329ec.hot-update.js
+│  │     │  ├─ layout.ca45c2e0d40e7570.hot-update.js
+│  │     │  ├─ layout.cc7272f56bfbcf81.hot-update.js
+│  │     │  ├─ layout.ceacfc955003f0ff.hot-update.js
+│  │     │  ├─ layout.d13eca78d6f0eba6.hot-update.js
+│  │     │  ├─ layout.d180d3cbb7d587e9.hot-update.js
+│  │     │  ├─ layout.d27c867164475706.hot-update.js
+│  │     │  ├─ layout.d678b7b35ab17d54.hot-update.js
+│  │     │  ├─ layout.d8758b104270d707.hot-update.js
+│  │     │  ├─ layout.d9b769cde160fc14.hot-update.js
+│  │     │  ├─ layout.e0c53c708a451a2e.hot-update.js
+│  │     │  ├─ layout.e7f30002fcc840af.hot-update.js
+│  │     │  ├─ layout.e89da62228b2c008.hot-update.js
+│  │     │  ├─ layout.e9e9c72ac741c6b3.hot-update.js
+│  │     │  ├─ layout.eb00ea4b063f349a.hot-update.js
+│  │     │  ├─ layout.eb67a45ba3072d11.hot-update.js
+│  │     │  ├─ layout.eb6b8b01af9f1cb5.hot-update.js
+│  │     │  ├─ layout.ebef659a3f07cddc.hot-update.js
+│  │     │  ├─ layout.ee69c7cc2eb0c0ed.hot-update.js
+│  │     │  ├─ layout.f3f73b4b631e9a67.hot-update.js
+│  │     │  ├─ layout.f9a15b1d6b06fe67.hot-update.js
+│  │     │  └─ layout.fdc9c82a5525fef9.hot-update.js
+│  │     ├─ b05bd7ded66353e5.webpack.hot-update.json
+│  │     ├─ b30fae880392e2aa.webpack.hot-update.json
+│  │     ├─ b3a4ef88e7cde882.webpack.hot-update.json
+│  │     ├─ b7aab0fe50d3f6ed.webpack.hot-update.json
+│  │     ├─ be4ee2c7334bb9e6.webpack.hot-update.json
+│  │     ├─ c1124de9466809c1.webpack.hot-update.json
+│  │     ├─ c23dd1cbf46a85ad.webpack.hot-update.json
+│  │     ├─ c2a404c70c086eaa.webpack.hot-update.json
+│  │     ├─ c40270b38adb7f6d.webpack.hot-update.json
+│  │     ├─ c501a41a049924ae.webpack.hot-update.json
+│  │     ├─ c53958fd7d2a9a6d.webpack.hot-update.json
+│  │     ├─ c5f82fc7a01329ec.webpack.hot-update.json
+│  │     ├─ ca45c2e0d40e7570.webpack.hot-update.json
+│  │     ├─ cc7272f56bfbcf81.webpack.hot-update.json
+│  │     ├─ ce14b0b6d821de10.webpack.hot-update.json
+│  │     ├─ ceacfc955003f0ff.webpack.hot-update.json
+│  │     ├─ d13eca78d6f0eba6.webpack.hot-update.json
+│  │     ├─ d180d3cbb7d587e9.webpack.hot-update.json
+│  │     ├─ d27c867164475706.webpack.hot-update.json
+│  │     ├─ d678b7b35ab17d54.webpack.hot-update.json
+│  │     ├─ d8758b104270d707.webpack.hot-update.json
+│  │     ├─ d9b769cde160fc14.webpack.hot-update.json
+│  │     ├─ e0c53c708a451a2e.webpack.hot-update.json
+│  │     ├─ e7f30002fcc840af.webpack.hot-update.json
+│  │     ├─ e89da62228b2c008.webpack.hot-update.json
+│  │     ├─ e9e9c72ac741c6b3.webpack.hot-update.json
+│  │     ├─ ea4d5ef29f66571a.webpack.hot-update.json
+│  │     ├─ eb00ea4b063f349a.webpack.hot-update.json
+│  │     ├─ eb67a45ba3072d11.webpack.hot-update.json
+│  │     ├─ eb6b8b01af9f1cb5.webpack.hot-update.json
+│  │     ├─ ebef659a3f07cddc.webpack.hot-update.json
+│  │     ├─ ee69c7cc2eb0c0ed.webpack.hot-update.json
+│  │     ├─ f3f73b4b631e9a67.webpack.hot-update.json
+│  │     ├─ f9a15b1d6b06fe67.webpack.hot-update.json
+│  │     ├─ fdc9c82a5525fef9.webpack.hot-update.json
+│  │     ├─ webpack.060ed4df1beb72d0.hot-update.js
+│  │     ├─ webpack.090a8ac4f6707bf1.hot-update.js
+│  │     ├─ webpack.09fa5beb9648c64d.hot-update.js
+│  │     ├─ webpack.0c44a3cf2ede6ad7.hot-update.js
+│  │     ├─ webpack.118de25a26e09549.hot-update.js
+│  │     ├─ webpack.14eb771ff83acb1e.hot-update.js
+│  │     ├─ webpack.15a674ed8a94f107.hot-update.js
+│  │     ├─ webpack.171ac76efc2c73d6.hot-update.js
+│  │     ├─ webpack.1a95aaa2031bb65b.hot-update.js
+│  │     ├─ webpack.207ecdd73e69bfb5.hot-update.js
+│  │     ├─ webpack.2455f15ec01407c1.hot-update.js
+│  │     ├─ webpack.2666a5a139aed503.hot-update.js
+│  │     ├─ webpack.28c7ccba95ce187f.hot-update.js
+│  │     ├─ webpack.2997474cba16ebf8.hot-update.js
+│  │     ├─ webpack.2bdaf8074664498d.hot-update.js
+│  │     ├─ webpack.2f56ad7bbf83f4a4.hot-update.js
+│  │     ├─ webpack.331b9e4d596c9835.hot-update.js
+│  │     ├─ webpack.359dbd23fba1ded7.hot-update.js
+│  │     ├─ webpack.3a7320f1983cdcfd.hot-update.js
+│  │     ├─ webpack.3c770d9d3f7e64a6.hot-update.js
+│  │     ├─ webpack.3df1bf3411f00d05.hot-update.js
+│  │     ├─ webpack.40de4a1b54d33b44.hot-update.js
+│  │     ├─ webpack.45b60e74f84df885.hot-update.js
+│  │     ├─ webpack.4a6d1bf2f4a329af.hot-update.js
+│  │     ├─ webpack.4b461aa8e415601a.hot-update.js
+│  │     ├─ webpack.4d9cd854ab3910a1.hot-update.js
+│  │     ├─ webpack.50156eb24f681ffb.hot-update.js
+│  │     ├─ webpack.52f12a6d4096213f.hot-update.js
+│  │     ├─ webpack.5464de12279057c0.hot-update.js
+│  │     ├─ webpack.57fc292dc21610a3.hot-update.js
+│  │     ├─ webpack.5b66f3687675b537.hot-update.js
+│  │     ├─ webpack.5bfbc9c702be15d5.hot-update.js
+│  │     ├─ webpack.5c88524ed44bb5fb.hot-update.js
+│  │     ├─ webpack.681e7a3e7e9b8f54.hot-update.js
+│  │     ├─ webpack.714ffd54bec47bed.hot-update.js
+│  │     ├─ webpack.7291594f05d16621.hot-update.js
+│  │     ├─ webpack.744c2f2e450e0475.hot-update.js
+│  │     ├─ webpack.780bbecd379daf5d.hot-update.js
+│  │     ├─ webpack.78a1228a7b56612c.hot-update.js
+│  │     ├─ webpack.79187b8d0db4056f.hot-update.js
+│  │     ├─ webpack.79a7acd47077c597.hot-update.js
+│  │     ├─ webpack.7ace63876c3f368a.hot-update.js
+│  │     ├─ webpack.7ae08694b7f19498.hot-update.js
+│  │     ├─ webpack.7b2fcbc4d3d9fc98.hot-update.js
+│  │     ├─ webpack.7d5a3e15a9057fc0.hot-update.js
+│  │     ├─ webpack.85e42fa1eb391fe8.hot-update.js
+│  │     ├─ webpack.92c53da023e61020.hot-update.js
+│  │     ├─ webpack.964e323493acb8f1.hot-update.js
+│  │     ├─ webpack.97b54e5c2d559da6.hot-update.js
+│  │     ├─ webpack.990ba207df442b14.hot-update.js
+│  │     ├─ webpack.99bb6b505cb50246.hot-update.js
+│  │     ├─ webpack.9c5a23e3cf3a363b.hot-update.js
+│  │     ├─ webpack.9cdc3ffae92d3328.hot-update.js
+│  │     ├─ webpack.9d45e5384fbba1ca.hot-update.js
+│  │     ├─ webpack.ad5314f6610145f2.hot-update.js
+│  │     ├─ webpack.adbf4f9331db5809.hot-update.js
+│  │     ├─ webpack.b05bd7ded66353e5.hot-update.js
+│  │     ├─ webpack.b30fae880392e2aa.hot-update.js
+│  │     ├─ webpack.b3a4ef88e7cde882.hot-update.js
+│  │     ├─ webpack.b7aab0fe50d3f6ed.hot-update.js
+│  │     ├─ webpack.be4ee2c7334bb9e6.hot-update.js
+│  │     ├─ webpack.c1124de9466809c1.hot-update.js
+│  │     ├─ webpack.c23dd1cbf46a85ad.hot-update.js
+│  │     ├─ webpack.c2a404c70c086eaa.hot-update.js
+│  │     ├─ webpack.c40270b38adb7f6d.hot-update.js
+│  │     ├─ webpack.c501a41a049924ae.hot-update.js
+│  │     ├─ webpack.c53958fd7d2a9a6d.hot-update.js
+│  │     ├─ webpack.c5f82fc7a01329ec.hot-update.js
+│  │     ├─ webpack.ca45c2e0d40e7570.hot-update.js
+│  │     ├─ webpack.cc7272f56bfbcf81.hot-update.js
+│  │     ├─ webpack.ce14b0b6d821de10.hot-update.js
+│  │     ├─ webpack.ceacfc955003f0ff.hot-update.js
+│  │     ├─ webpack.d13eca78d6f0eba6.hot-update.js
+│  │     ├─ webpack.d180d3cbb7d587e9.hot-update.js
+│  │     ├─ webpack.d27c867164475706.hot-update.js
+│  │     ├─ webpack.d678b7b35ab17d54.hot-update.js
+│  │     ├─ webpack.d8758b104270d707.hot-update.js
+│  │     ├─ webpack.d9b769cde160fc14.hot-update.js
+│  │     ├─ webpack.e0c53c708a451a2e.hot-update.js
+│  │     ├─ webpack.e7f30002fcc840af.hot-update.js
+│  │     ├─ webpack.e89da62228b2c008.hot-update.js
+│  │     ├─ webpack.e9e9c72ac741c6b3.hot-update.js
+│  │     ├─ webpack.ea4d5ef29f66571a.hot-update.js
+│  │     ├─ webpack.eb00ea4b063f349a.hot-update.js
+│  │     ├─ webpack.eb67a45ba3072d11.hot-update.js
+│  │     ├─ webpack.eb6b8b01af9f1cb5.hot-update.js
+│  │     ├─ webpack.ebef659a3f07cddc.hot-update.js
+│  │     ├─ webpack.ee69c7cc2eb0c0ed.hot-update.js
+│  │     ├─ webpack.f3f73b4b631e9a67.hot-update.js
+│  │     ├─ webpack.f9a15b1d6b06fe67.hot-update.js
+│  │     └─ webpack.fdc9c82a5525fef9.hot-update.js
+│  ├─ trace
+│  └─ types/
+│     ├─ app/
+│     │  ├─ dashboard/
+│     │  │  └─ page.ts
+│     │  ├─ layout.ts
+│     │  ├─ login-signup/
+│     │  │  └─ page.ts
+│     │  ├─ page.ts
+│     │  ├─ polls/
+│     │  │  └─ [pollid]/
+│     │  │     └─ page.ts
+│     │  └─ signin/
+│     │     └─ page.ts
+│     └─ package.json
+├─ .prettierrc.json
+├─ Dockerfile
+├─ README.md
+├─ bun.lockb
+├─ next-env.d.ts
+├─ next.config.js
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ public/
+│  ├─ Squircle.svg
+│  ├─ a.png
+│  ├─ b.png
+│  ├─ call.svg
+│  ├─ facebook.svg
+│  ├─ facebookWhite.svg
+│  ├─ favicon.ico
+│  ├─ google.svg
+│  ├─ googleWhite.svg
+│  ├─ handshake.svg
+│  ├─ images/
+│  │  ├─ Attachment.svg
+│  │  ├─ active_bullet.svg
+│  │  ├─ askPolly/
+│  │  │  ├─ bookmark.svg
+│  │  │  ├─ copy.svg
+│  │  │  ├─ editBtn.svg
+│  │  │  ├─ refreshBtn.svg
+│  │  │  ├─ report.svg
+│  │  │  ├─ sendBtn.svg
+│  │  │  ├─ slideBtn.svg
+│  │  │  ├─ tickBlack.svg
+│  │  │  ├─ tickWhite.svg
+│  │  │  ├─ uploadBtn.svg
+│  │  │  └─ verticalMenu.svg
+│  │  ├─ auth/
+│  │  │  └─ Checkbox input.svg
+│  │  ├─ check.svg
+│  │  ├─ checkbox.svg
+│  │  ├─ conversation/
+│  │  │  ├─ Iconly.svg
+│  │  │  ├─ audio_icon.svg
+│  │  │  ├─ disliked.svg
+│  │  │  ├─ flagCompleteIcon.svg
+│  │  │  ├─ frame.svg
+│  │  │  ├─ go.svg
+│  │  │  ├─ introduction.svg
+│  │  │  ├─ liked.svg
+│  │  │  ├─ loginBg.svg
+│  │  │  ├─ loved.svg
+│  │  │  ├─ menuIcon.svg
+│  │  │  ├─ menuIn.svg
+│  │  │  ├─ notes.svg
+│  │  │  ├─ pause.svg
+│  │  │  ├─ poll.svg
+│  │  │  ├─ redo.svg
+│  │  │  ├─ reference.svg
+│  │  │  ├─ referenceBlue.svg
+│  │  │  ├─ send_icon.svg
+│  │  │  ├─ sound.svg
+│  │  │  ├─ squicle.svg
+│  │  │  ├─ toko.svg
+│  │  │  └─ toogle_text.svg
+│  │  ├─ cross.svg
+│  │  ├─ dashboard/
+│  │  │  ├─ dashboard_checked.svg
+│  │  │  ├─ dashboard_unchecked.svg
+│  │  │  └─ tick.svg
+│  │  ├─ done_bullet.svg
+│  │  ├─ dropDownIcon.svg
+│  │  ├─ fun.svg
+│  │  ├─ home_icon.svg
+│  │  ├─ integrations.svg
+│  │  ├─ notes.svg
+│  │  ├─ notification.svg
+│  │  ├─ out.svg
+│  │  ├─ password.svg
+│  │  ├─ person.png
+│  │  ├─ phone.svg
+│  │  ├─ plus.svg
+│  │  ├─ plusBlack.svg
+│  │  ├─ poll_type/
+│  │  │  ├─ completed.svg
+│  │  │  ├─ download.svg
+│  │  │  ├─ not_available.svg
+│  │  │  ├─ not_selected.svg
+│  │  │  └─ selected.svg
+│  │  ├─ polls/
+│  │  │  ├─ analyze.svg
+│  │  │  ├─ copy_to_clipboard.svg
+│  │  │  ├─ cross.svg
+│  │  │  ├─ edit_input.svg
+│  │  │  ├─ full_work.svg
+│  │  │  ├─ group.svg
+│  │  │  ├─ qr_code.png
+│  │  │  └─ zap_poll.svg
+│  │  ├─ polls.svg
+│  │  ├─ promote.svg
+│  │  ├─ question.svg
+│  │  ├─ respondent/
+│  │  │  ├─ question.svg
+│  │  │  ├─ question_ins.svg
+│  │  │  ├─ time.svg
+│  │  │  └─ time_ins.svg
+│  │  ├─ response_stack.svg
+│  │  ├─ results/
+│  │  │  ├─ ai.svg
+│  │  │  ├─ filled.svg
+│  │  │  ├─ refresh.svg
+│  │  │  ├─ send.svg
+│  │  │  └─ upload.svg
+│  │  ├─ ri_facebook-fill.svg
+│  │  ├─ ri_linkedin-fill.svg
+│  │  ├─ search.svg
+│  │  ├─ submit_chat.svg
+│  │  ├─ submit_chat2.svg
+│  │  ├─ tick-solid.svg
+│  │  ├─ visibility/
+│  │  │  ├─ checked.svg
+│  │  │  └─ unchecked.svg
+│  │  ├─ wallet.svg
+│  │  └─ workspace/
+│  │     ├─ AI Icons-9.svg
+│  │     ├─ Illustration.svg
+│  │     ├─ add.svg
+│  │     ├─ analytics.svg
+│  │     ├─ clock.svg
+│  │     ├─ copy.svg
+│  │     ├─ create_workspace.svg
+│  │     ├─ curve.svg
+│  │     ├─ delete.svg
+│  │     ├─ dots.svg
+│  │     ├─ filled.svg
+│  │     ├─ globe.svg
+│  │     ├─ globeWhite.svg
+│  │     ├─ info.svg
+│  │     ├─ menu.svg
+│  │     ├─ multiple_choice.svg
+│  │     ├─ password.svg
+│  │     ├─ passwordWhite.svg
+│  │     ├─ plus.svg
+│  │     ├─ pro.svg
+│  │     ├─ single_choice.svg
+│  │     ├─ team.svg
+│  │     ├─ tick.svg
+│  │     ├─ upload.svg
+│  │     ├─ uploadGray.svg
+│  │     └─ upload_file.svg
+│  ├─ index.html
+│  ├─ light.svg
+│  ├─ linkedin.svg
+│  ├─ linkedinWhite.svg
+│  ├─ loaders/
+│  │  ├─ loader-blue.gif
+│  │  ├─ loader-red2.gif
+│  │  └─ loader-white.gif
+│  ├─ logo.png
+│  ├─ logo.svg
+│  ├─ mail.svg
+│  ├─ manifest.json
+│  ├─ next.svg
+│  ├─ notes.png
+│  ├─ p.png
+│  ├─ pollvault.svg
+│  ├─ pollvault2.svg
+│  ├─ pollvaultLogo.svg
+│  ├─ preview.svg
+│  ├─ purpleSmallLogo.svg
+│  ├─ robots.txt
+│  ├─ small_screen_logo.svg
+│  ├─ vercel.svg
+│  └─ viktor.png
+├─ repopack-output.txt
+├─ src/
+│  ├─ app/
+│  │  ├─ StoreProvider.js
+│  │  ├─ analyze/
+│  │  │  └─ [pollid]/
+│  │  │     ├─ AnalyzeHeader.tsx
+│  │  │     ├─ components/
+│  │  │     │  └─ Files/
+│  │  │     │     ├─ Files.tsx
+│  │  │     │     └─ SideBar.tsx
+│  │  │     └─ page.tsx
+│  │  ├─ api/
+│  │  │  ├─ Outline/
+│  │  │  │  └─ Outline.ts
+│  │  │  ├─ Polls/
+│  │  │  │  └─ Polls.ts
+│  │  │  ├─ api_types/
+│  │  │  │  ├─ analysisPoll_types.ts
+│  │  │  │  ├─ outline_types.ts
+│  │  │  │  └─ poll_types.ts
+│  │  │  ├─ ask polly/
+│  │  │  │  ├─ files.ts
+│  │  │  │  └─ polly.ts
+│  │  │  ├─ auth.ts
+│  │  │  ├─ authenticate/
+│  │  │  │  └─ route.ts
+│  │  │  ├─ conversation/
+│  │  │  │  └─ conversation.ts
+│  │  │  ├─ dashboard/
+│  │  │  │  ├─ analysis.ts
+│  │  │  │  └─ polls.ts
+│  │  │  ├─ forms/
+│  │  │  │  ├─ poll.ts
+│  │  │  │  └─ updatePoll.ts
+│  │  │  ├─ payment/
+│  │  │  │  └─ create-checkout-session/
+│  │  │  │     └─ route.ts
+│  │  │  └─ workspace/
+│  │  │     ├─ pollSettings.ts
+│  │  │     └─ workSpaces.ts
+│  │  ├─ basic-profile/
+│  │  │  └─ page.tsx
+│  │  ├─ component/
+│  │  │  ├─ DeleteWorkspace.tsx
+│  │  │  ├─ Deletecomponent.tsx
+│  │  │  ├─ DuplicateComponent.tsx
+│  │  │  ├─ Navbar.tsx
+│  │  │  ├─ PublishComponents.tsx
+│  │  │  ├─ askpolly/
+│  │  │  │  ├─ components/
+│  │  │  │  │  ├─ Conversation.tsx
+│  │  │  │  │  ├─ ConversationHistory.tsx
+│  │  │  │  │  └─ ReportSection.tsx
+│  │  │  │  └─ page.tsx
+│  │  │  ├─ createWorkspaceComponent.tsx
+│  │  │  └─ loading/
+│  │  │     ├─ FilesLoading.tsx
+│  │  │     ├─ PollsLoading.tsx
+│  │  │     ├─ QuestionsLoading.tsx
+│  │  │     ├─ WorkspaceQuestionLoading.tsx
+│  │  │     ├─ WorkspacesLoading.tsx
+│  │  │     └─ analysisPollsLoading.tsx
+│  │  ├─ conversation/
+│  │  │  └─ [conversation_id]/
+│  │  │     ├─ components/
+│  │  │     │  ├─ Instructions.tsx
+│  │  │     │  ├─ Preference.tsx
+│  │  │     │  ├─ Reference.tsx
+│  │  │     │  ├─ SpeechComponent.tsx
+│  │  │     │  └─ context/
+│  │  │     │     ├─ DeepgramContextProvider.tsx
+│  │  │     │     └─ MicrophoneContextProvider.tsx
+│  │  │     └─ page.tsx
+│  │  ├─ dashboard/
+│  │  │  ├─ dashboard_components/
+│  │  │  │  ├─ Archieve.tsx
+│  │  │  │  ├─ Drafts.tsx
+│  │  │  │  ├─ ImportedSurvey.tsx
+│  │  │  │  ├─ Integrations.tsx
+│  │  │  │  ├─ Promote.tsx
+│  │  │  │  ├─ Wallet.tsx
+│  │  │  │  ├─ Workspaces.tsx
+│  │  │  │  ├─ analyze-poll/
+│  │  │  │  │  ├─ components/
+│  │  │  │  │  │  ├─ Basic.tsx
+│  │  │  │  │  │  └─ KnowledgeBase.tsx
+│  │  │  │  │  └─ page.tsx
+│  │  │  │  ├─ create-poll/
+│  │  │  │  │  ├─ components/
+│  │  │  │  │  │  ├─ Audience.tsx
+│  │  │  │  │  │  └─ Basic.tsx
+│  │  │  │  │  └─ page.tsx
+│  │  │  │  ├─ polls.tsx
+│  │  │  │  └─ zap-poll/
+│  │  │  │     └─ zapopoll.tsx
+│  │  │  └─ page.tsx
+│  │  ├─ forgot-password/
+│  │  │  └─ page.tsx
+│  │  ├─ globals.css
+│  │  ├─ layout.tsx
+│  │  ├─ login-signup/
+│  │  │  └─ page.tsx
+│  │  ├─ logo.svg
+│  │  ├─ not-found.jsx
+│  │  ├─ otp/
+│  │  │  └─ Otp.tsx
+│  │  ├─ page.tsx
+│  │  ├─ polls/
+│  │  │  └─ [pollid]/
+│  │  │     ├─ Sidebar.tsx
+│  │  │     ├─ WorkspaceHeader.tsx
+│  │  │     ├─ components/
+│  │  │     │  ├─ FileDownload.js
+│  │  │     │  ├─ Flow.tsx
+│  │  │     │  ├─ Integrations.tsx
+│  │  │     │  ├─ Outline.tsx
+│  │  │     │  ├─ PollSettings/
+│  │  │     │  │  ├─ PollSettings.tsx
+│  │  │     │  │  ├─ PollSettingsSection.tsx
+│  │  │     │  │  └─ pollSettingsPoll.tsx
+│  │  │     │  ├─ PollsComponents/
+│  │  │     │  │  ├─ Audience.tsx
+│  │  │     │  │  └─ Basic.tsx
+│  │  │     │  ├─ Polly.tsx
+│  │  │     │  ├─ QuestionItem/
+│  │  │     │  │  └─ QuestionItem.tsx
+│  │  │     │  ├─ ResultComponents/
+│  │  │     │  │  ├─ LIneChart.jsx
+│  │  │     │  │  └─ Overview.tsx
+│  │  │     │  ├─ Results.tsx
+│  │  │     │  └─ Share.tsx
+│  │  │     └─ page.tsx
+│  │  ├─ pricing/
+│  │  │  ├─ components/
+│  │  │  │  ├─ AdditionalCredits.tsx
+│  │  │  │  ├─ CoreFeatures.tsx
+│  │  │  │  ├─ Header.tsx
+│  │  │  │  ├─ HeroSection.tsx
+│  │  │  │  ├─ PlanSelection.tsx
+│  │  │  │  ├─ PricingCard.tsx
+│  │  │  │  ├─ PricingCards.tsx
+│  │  │  │  └─ StripePaymentForm.tsx
+│  │  │  └─ page.tsx
+│  │  ├─ reset-password/
+│  │  │  └─ page.tsx
+│  │  ├─ respondent/
+│  │  │  └─ page.tsx
+│  │  ├─ setup-password/
+│  │  │  └─ page.tsx
+│  │  ├─ signin/
+│  │  │  └─ page.tsx
+│  │  ├─ signup/
+│  │  │  └─ page.tsx
+│  │  ├─ thanks/
+│  │  │  └─ page.tsx
+│  │  └─ types/
+│  │     ├─ Audience/
+│  │     │  └─ Audienct_types.ts
+│  │     ├─ Authentication/
+│  │     │  └─ Authentication.ts
+│  │     ├─ Conversation/
+│  │     │  └─ Conversation_Types.ts
+│  │     ├─ Dashboard/
+│  │     │  └─ Results.ts
+│  │     └─ Results/
+│  │        └─ Results.tsx
+│  ├─ components/
+│  │  ├─ PollvaultSidebarData.tsx
+│  │  ├─ ShowPollsOptions.tsx
+│  │  ├─ Texts/
+│  │  │  └─ Texts.tsx
+│  │  ├─ layouts/
+│  │  │  ├─ PlatformSignup.tsx
+│  │  │  └─ Privacy.tsx
+│  │  └─ ui/
+│  │     ├─ Texts/
+│  │     │  └─ Text.tsx
+│  │     └─ buttons/
+│  │        ├─ Button.module.css
+│  │        ├─ Button.tsx
+│  │        ├─ Buttons.tsx
+│  │        └─ CredentialButtons.tsx
+│  ├─ constants/
+│  │  └─ enums/
+│  │     ├─ ButtonEnums/
+│  │     │  └─ ButtonEnums.tsx
+│  │     ├─ HeaderEnums/
+│  │     │  └─ HeaderEnums.tsx
+│  │     └─ QuestionTypes/
+│  │        └─ QuestionTypes.ts
+│  ├─ lib/
+│  │  ├─ features/
+│  │  │  ├─ analysisFiles/
+│  │  │  │  └─ analysisFilesSlice.ts
+│  │  │  ├─ askPolly/
+│  │  │  │  └─ askPollySlice.ts
+│  │  │  ├─ conversation/
+│  │  │  │  └─ conversationSlice.ts
+│  │  │  ├─ dashboard/
+│  │  │  │  ├─ pollsSlice.ts
+│  │  │  │  └─ updatePoll.ts
+│  │  │  ├─ workspace/
+│  │  │  │  ├─ analyzeHeaderSlice.ts
+│  │  │  │  ├─ fullWorkspaceSliece.ts
+│  │  │  │  ├─ outlineSlice.ts
+│  │  │  │  ├─ pollSettingsSlice.ts
+│  │  │  │  ├─ workSpaceHeaderSlice.ts
+│  │  │  │  └─ workspaceSlice.ts
+│  │  │  ├─ workspaceOutlines/
+│  │  │  │  └─ workspaceOutlineSlice.ts
+│  │  │  └─ woskspaceOperations/
+│  │  │     └─ workspacOperationSlice.ts
+│  │  └─ store.tsx
+│  ├─ static/
+│  │  ├─ static_data.ts
+│  │  ├─ static_styles.ts
+│  │  └─ workspace.ts
+│  └─ utils/
+│     ├─ auth/
+│     │  └─ auth.ts
+│     └─ form/
+│        └─ files.ts
+├─ tailwind.config.ts
+└─ tsconfig.json

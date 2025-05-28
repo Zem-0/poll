@@ -1,0 +1,352 @@
+/* Basic button style */
+.btn {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  /* display: inline-block; */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* overflow: hidden; */
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.3s linear;
+  z-index: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.btn.onlyIconBtn{
+  gap: 0;
+}
+.btn:disabled{
+  cursor: not-allowed;
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+.btn:focus {
+  outline: 0;
+}
+.btn .effectDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0.375rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.btn:not(:disabled):active {
+  transform: scale(0.9);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+/* Hover Effect */
+.btn .effect {
+  position: absolute;
+  display: block;
+  width: 0;
+  /* height: 0; */
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.btn:hover .effect {
+  width: 225%;
+  /* height: 325%; */
+  aspect-ratio: 1/1;
+  background-color: #fcfcfc;
+}
+
+/* Primary button styles */
+.primaryBlack {
+  background-color: #333333;
+  color: #fcfcfc;
+}
+.primaryBlack:not(:disabled):hover {
+  color: #333333;
+}
+.primaryBlack:hover .effect {
+  background-color: #fcfcfc;
+}
+
+.primaryBlue {
+  background-color: #2b6ce1;
+  color: #fcfcfc;
+}
+
+.primaryBlue:not(:disabled):hover {
+  color: #2b6ce1;
+}
+.primaryBlue:hover .effect{
+  background-color: #fcfcfc;
+}
+.primaryWhite{
+    border: none;
+}
+.primaryWhite:not(:disabled):hover{
+    color: #fcfcfc;
+}
+.primaryWhite:hover .effect{
+  background-color: #2b6ce1;
+}
+
+/* Outline button styles */
+.outline {
+  background-color: #fcfcfc;
+  color: #2b6ce1;
+  border: 2px solid #2b6ce1;
+  border-radius: calc(0.375rem + 2px);
+}
+.outline:not(:disabled):hover {
+  color: #fcfcfc;
+}
+.outline:hover .effect {
+  background-color: #2b6ce1;
+}
+
+/* Delete button styles */
+.delete {
+  background-color: #e97451;
+  color: #fcfcfc;
+}
+.delete:not(:disabled):hover {
+  color: #333333;
+}
+.delete:hover .effect {
+  background-color: #fcfcfc;
+}
+
+/* for gradient btn */
+.gradient{
+  background: linear-gradient(to bottom, #6244D6, #2B6CE1);
+  color: #fff;
+}
+.gradient:not(:disabled):hover {
+  color: #2B6CE1;
+}
+
+
+/* Loader style */
+/* Loader state */
+.loader {
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: auto;
+}
+
+/* Loader styles based on the button type */
+.btn.loading .loader {
+  /* this is the default loading */
+  background-image: url("/loaders/loader-white.gif"); /* White loader for dark background */
+}
+.primaryBlack.loading .loader {
+  background-image: url("/loaders/loader-white.gif"); /* White loader for dark background */
+}
+
+.outline.loading .loader {
+  background-image: url("/loaders/loader-blue.gif"); /* Blue loader for outline */
+}
+
+.primaryWhite.loading .loader {
+  background-image: url("/loaders/loader-blue.gif"); /* Blue loader for outline */
+}
+
+.loading .effect {
+  display: none;
+}
+.loading:hover .effect {
+  width: 0;
+  height: 0;
+  transition: none;
+}
+/* .loading{
+  color
+} */
+/* Loader overlay to maintain button size */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Ensure loader appears above other content */
+}
+
+/* Click Animation - Bubble Effect */
+.btn:before,
+.btn:after {
+  position: absolute;
+  content: "";
+  display: block;
+  max-width: 200px;
+  width: 140%;
+  height: 100%;
+  left: 50%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+  transform: translateX(-50%);
+}
+.btn:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #2b6ce1 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #2b6ce1 20%, transparent 30%),
+    radial-gradient(circle, #2b6ce1 20%, transparent 20%),
+    radial-gradient(circle, #2b6ce1 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #2b6ce1 15%, transparent 20%),
+    radial-gradient(circle, #2b6ce1 20%, transparent 20%),
+    radial-gradient(circle, #2b6ce1 20%, transparent 20%),
+    radial-gradient(circle, #2b6ce1 20%, transparent 20%),
+    radial-gradient(circle, #2b6ce1 20%, transparent 20%);
+  background-size:
+    10% 10%,
+    20% 20%,
+    15% 15%,
+    20% 20%,
+    18% 18%,
+    10% 10%,
+    15% 15%,
+    10% 10%,
+    18% 18%;
+}
+.btn:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #2b6ce1 20%, transparent 20%),
+    radial-gradient(circle, #2b6ce1 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #2b6ce1 15%, transparent 20%),
+    radial-gradient(circle, #2b6ce1 20%, transparent 20%),
+    radial-gradient(circle, #2b6ce1 20%, transparent 20%),
+    radial-gradient(circle, #2b6ce1 20%, transparent 20%),
+    radial-gradient(circle, #2b6ce1 20%, transparent 20%);
+  background-size:
+    15% 15%,
+    20% 20%,
+    18% 18%,
+    20% 20%,
+    15% 15%,
+    10% 10%,
+    20% 20%;
+}
+.btn.delete::before {
+  background-image: radial-gradient(circle, #e97451 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #e97451 20%, transparent 30%),
+    radial-gradient(circle, #e97451 20%, transparent 20%),
+    radial-gradient(circle, #e97451 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #e97451 15%, transparent 20%),
+    radial-gradient(circle, #e97451 20%, transparent 20%),
+    radial-gradient(circle, #e97451 20%, transparent 20%),
+    radial-gradient(circle, #e97451 20%, transparent 20%),
+    radial-gradient(circle, #e97451 20%, transparent 20%);
+}
+.btn.delete::after {
+  background-image: radial-gradient(circle, #e97451 20%, transparent 20%),
+    radial-gradient(circle, #e97451 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #e97451 15%, transparent 20%),
+    radial-gradient(circle, #e97451 20%, transparent 20%),
+    radial-gradient(circle, #e97451 20%, transparent 20%),
+    radial-gradient(circle, #e97451 20%, transparent 20%),
+    radial-gradient(circle, #e97451 20%, transparent 20%);
+}
+.btn.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.btn.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+@keyframes topBubbles {
+  0% {
+    background-position:
+      5% 90%,
+      10% 90%,
+      10% 90%,
+      15% 90%,
+      25% 90%,
+      25% 90%,
+      40% 90%,
+      55% 90%,
+      70% 90%;
+  }
+  50% {
+    background-position:
+      0% 80%,
+      0% 20%,
+      10% 40%,
+      20% 0%,
+      30% 30%,
+      22% 50%,
+      50% 50%,
+      65% 20%,
+      90% 30%;
+  }
+  100% {
+    background-position:
+      0% 70%,
+      0% 10%,
+      10% 30%,
+      20% -10%,
+      30% 20%,
+      22% 40%,
+      50% 40%,
+      65% 10%,
+      90% 20%;
+    background-size:
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%;
+  }
+}
+@keyframes bottomBubbles {
+  0% {
+    background-position:
+      10% -10%,
+      30% 10%,
+      55% -10%,
+      70% -10%,
+      85% -10%,
+      70% -10%,
+      70% 0%;
+  }
+  50% {
+    background-position:
+      0% 80%,
+      20% 80%,
+      45% 60%,
+      60% 100%,
+      75% 70%,
+      95% 60%,
+      105% 0%;
+  }
+  100% {
+    background-position:
+      0% 90%,
+      20% 90%,
+      45% 70%,
+      60% 110%,
+      75% 80%,
+      95% 70%,
+      110% 10%;
+    background-size:
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%,
+      0% 0%;
+  }
+}
