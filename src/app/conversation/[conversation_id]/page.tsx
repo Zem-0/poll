@@ -40,6 +40,7 @@ import ConversationInput from "./components/ConversationInput";
 import AttachmentComponent from "./components/AttachmentComponent";
 import MobileSideMenu from "./components/MobileSideMenu";
 import ConversationQuestionComponent from "./components/ConversationQuestionComponent";
+import ResponseButtons from "./components/ResponseButtons";
 
 interface PageProps {
   params: any;
@@ -379,6 +380,29 @@ const Page: React.FC<PageProps> = ({ params }) => {
     checkLogin();
   }, []);
 
+  const handleTextInputClick = () => {
+    console.log('Text Input button clicked');
+    // TODO: Implement logic for text input button
+  };
+
+  const handlePauseClick = () => {
+    console.log('Pause button clicked');
+    // TODO: Implement logic for pause button
+  };
+
+  const handleRedoClick = () => {
+    console.log('Redo button clicked');
+    // TODO: Implement logic for redo button
+  };
+
+  const handleSkipClick = () => {
+    NextQuestion(true);
+  };
+
+  const handleStopClick = () => {
+    setStopSurvey(true);
+  };
+
   return (
     <>
       {/* {startPoll == true && <Preference />} */}
@@ -432,7 +456,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
 
             {conversation.conversation_type === "text" ? (
               <>
-                <div className="relative z-30 shadow-xl bg-[#ffffff] w-full flex flex-col gap-2 justify-between h-svh lg:h-[650px]  overflow-hidden p-5 lg:rounded-2xl lg:translate-y-[-2rem] lg:border lg:border-Yellow">
+                <div className="relative z-30 shadow-xl bg-slate-900 w-full flex flex-col gap-2 justify-between h-svh lg:h-[650px]  overflow-hidden p-5 lg:rounded-2xl lg:translate-y-[-2rem] lg:border lg:border-Yellow">
                   {/* for restarting the survey */}
                   {showPopup && (
                     <div className="fixed inset-0 flex items-center justify-center bg-opacity-50 backdrop-blur-sm z-50">
@@ -652,6 +676,14 @@ const Page: React.FC<PageProps> = ({ params }) => {
                           <img src="/images/conversation/go.svg" alt="icon" />
                         </button>
                       </div>
+
+                      {/* Add the initial thank you text here */}
+                      {!newMessageLoading && !conversation.currentQuestion?.current_question?.question && (
+                         <div className="my-4 text-center text-[16px] font-normal leading-[22px] text-[#FFFFFF]">
+                           Thank you for taking time today. I would like take 5 mins of your time to get your thoughts about Pollvault.
+                         </div>
+                      )}
+
                       <div
                         ref={scrollableContainerRef}
                         className="overflow-y-scroll no-scrollbar pt-4"
@@ -719,6 +751,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
                                   alt=""
                                 />
                               </div>
+                              {/* Removed the duplicate thank you text from here */}
                               <p className="w-full text-[16px] font-normal leading-[22px] text-[#183D81]">
                                 Thank you so much for your time today! I know it
                                 ended up being a bit longer survey, but I really
@@ -825,7 +858,13 @@ const Page: React.FC<PageProps> = ({ params }) => {
                             </button>
                           )}
                           {!noMoreText && (
-                            <ConversationInput isInputBtnLoading={isInputBtnLoading} freeTextAnswer={freeTextAnswer} setFreeTextAnswer={setFreeTextAnswer}  NextQuestion={NextQuestion}/>
+                            <ResponseButtons
+                              onTextInputClick={handleTextInputClick}
+                              onSkipClick={handleSkipClick}
+                              onPauseClick={handlePauseClick}
+                              onRedoClick={handleRedoClick}
+                              onStopClick={handleStopClick}
+                            />
                           )}
                         </div>
                       )}
